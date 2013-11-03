@@ -121,6 +121,8 @@ delayScreensaver()
         xscreensaver-command -deactivate > /dev/null
     elif [ "$screensaver" == "kscreensaver" ]; then
         qdbus org.freedesktop.ScreenSaver /ScreenSaver SimulateUserActivity > /dev/null
+    else
+    	echo "screensaver not detected"
     fi
 }
 
